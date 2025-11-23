@@ -125,6 +125,6 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'  # or your email provider
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'automextechnoogies@gmail.com'  # your email
+EMAIL_HOST_USER = 'automextechnologies@gmail.com'  # your email
 EMAIL_HOST_PASSWORD = 'tjas qzrg vdza uwlg'  # your email password or app password
 DEFAULT_FROM_EMAIL = 'automextechnologies@gmail.com'

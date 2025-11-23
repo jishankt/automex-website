@@ -1,11 +1,14 @@
 services:
   - type: web
-    name: automax
+    name: automex-website
     env: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn automex.wsgi:application
+    plan: free
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn automex.wsgi:application"
     envVars:
-      - key: DJANGO_SETTINGS_MODULE
-        value: automex.settings
-      - key: PYTHON_VERSION
-        value: 3.10
+      - key: DEBUG
+        value: "False"
+      - key: SECRET_KEY
+        generateValue: true
+      - key: ALLOWED_HOSTS
+        value: ".onrender.com"
